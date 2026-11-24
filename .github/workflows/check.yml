@@ -1,0 +1,17 @@
+name: Check build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build index.html from src/
+        run: python3 build.py
+      - name: index.html must match src/ (run build.py and commit)
+        run: git diff --exit-code index.html
+      - name: Scripts parse
+        run: |
+          node -e "const s=require('fs').readFileSync('index.html','utf8');const re=/<script[^>]*>([\s\S]*?)<\/script>/g;let m,n=0;while((m=re.exec(s))){new Function(m[1]);n++;}console.log('ok',n,'scripts')"

@@ -1,0 +1,5 @@
+tests/shots*/
+tests/exported*.html
+__pycache__/
+*.pyc
+.DS_Store

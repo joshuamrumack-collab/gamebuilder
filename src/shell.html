@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Builder 2D</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  :root{
+    --bg:#f4f1ea; --panel:#ffffff; --ink:#1f2333; --muted:#6b7080; --line:#e2ddd2;
+    --accent:#2f7de1; --accent-soft:#e3eefc; --play:#2fa84f; --play-dark:#23853d; --danger:#d9434a;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  body.dyslexic{font-family:"Comic Sans MS","Trebuchet MS",Verdana,sans-serif;letter-spacing:.02em}
+  button,select,input{font:inherit;color:inherit}
+  button{cursor:pointer}
+  .app{display:grid;grid-template-rows:auto 1fr auto;height:100%}
+  header{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .brand{font-weight:800;font-size:17px;margin-right:8px;display:flex;align-items:center;gap:8px}
+  .brand .logo{width:32px;height:32px;border-radius:8px;image-rendering:pixelated}
+  .proj-name{border:1px solid transparent;border-radius:8px;padding:6px 8px;min-width:140px;max-width:220px;background:transparent;font-weight:600}
+  .proj-name:hover,.proj-name:focus{border-color:var(--line);background:#fff;outline:none}
+  .tb{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border:1px solid var(--line);background:#fff;border-radius:10px;font-weight:600}
+  .tb:hover{background:#f7f5f0}
+  .tb:focus-visible,.chip:focus-visible,.tile-btn:focus-visible,.obj-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  .tb[disabled]{opacity:.4;cursor:default}
+  .tb.play{background:var(--play);border-color:var(--play-dark);color:#fff;font-size:16px;padding:0 20px}
+  .tb.play:hover{background:var(--play-dark)}
+  .spacer{flex:1}
+  .main{display:grid;grid-template-columns:230px 1fr 300px;min-height:0}
+  aside{background:var(--panel);overflow:auto;min-height:0}
+  aside.left{border-right:1px solid var(--line)}
+  aside.right{border-left:1px solid var(--line)}
+  .sec{padding:12px;border-bottom:1px solid var(--line)}
+  .sec h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .chip{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;border:2px solid var(--line);border-radius:10px;background:#fff;font-size:12px;font-weight:600;min-height:44px}
+  .chip .ic{font-size:18px;line-height:1}
+  .chip.on{border-color:var(--accent);background:var(--accent-soft)}
+  .chip[disabled]{opacity:.4;cursor:default}
+  .tabs{display:flex;gap:4px;margin-bottom:10px}
+  .tabs button{flex:1;padding:8px;border:none;border-radius:8px;background:#f0ece3;font-weight:700}
+  .tabs button.on{background:var(--ink);color:#fff}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .tile-btn,.obj-btn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px;border:2px solid var(--line);border-radius:10px;background:#fff;font-size:11.5px;font-weight:600;min-height:44px;text-align:center}
+  .tile-btn img,.obj-btn img{width:40px;height:40px;image-rendering:pixelated}
+  .tile-btn.on,.obj-btn.on{border-color:var(--accent);background:var(--accent-soft)}
+  .obj-btn .cards{font-size:10px;line-height:1;min-height:10px}
+  .add-btn{width:100%;margin-top:8px;justify-content:center}
+  .stage-wrap{display:flex;flex-direction:column;min-width:0;min-height:0}
+  .stage{flex:1;overflow:auto;padding:16px;min-height:0;background:
+      repeating-linear-gradient(45deg,#ebe6db 0 10px,#e6e0d4 10px 20px)}
+  .stage canvas{display:block;image-rendering:pixelated;box-shadow:0 2px 0 rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.12);border-radius:6px;touch-action:none;cursor:crosshair}
+  .stagebar{display:flex;align-items:center;gap:10px;padding:6px 12px;background:var(--panel);border-top:1px solid var(--line);font-size:13px;color:var(--muted);flex-wrap:wrap}
+  .stagebar label{display:flex;align-items:center;gap:6px}
+  .field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+  .field>span{font-size:13px;font-weight:600}
+  .field input[type=text],.field select{padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff;min-height:40px}
+  .field input[type=range]{width:100%}
+  .row{display:flex;align-items:center;gap:8px}
+  .field.row{flex-direction:row;align-items:center;font-weight:600;font-size:13px}
+  .field.row input[type=checkbox]{width:20px;height:20px}
+  .sprites{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+  .sprites button{padding:2px;border:2px solid var(--line);border-radius:8px;background:#fff}
+  .sprites button.on{border-color:var(--accent);background:var(--accent-soft)}
+  .sprites img{width:100%;image-rendering:pixelated;display:block}
+  .card{border:2px solid var(--line);border-radius:var(--radius);padding:10px;margin-bottom:8px;background:#fffdf8}
+  .card-head{display:flex;align-items:center;gap:8px;font-weight:700}
+  .card-head .ic{font-size:20px}
+  .card-head .x{margin-left:auto;border:none;background:none;font-size:18px;color:var(--muted);width:32px;height:32px;border-radius:8px}
+  .card-head .x:hover{background:#f3e3e3;color:var(--danger)}
+  .card p{margin:4px 0 8px;font-size:12.5px;color:var(--muted)}
+  .card .say{border:none;background:none;padding:0 4px;font-size:14px}
+  .setting{display:grid;grid-template-columns:1fr 2fr 24px;align-items:center;gap:6px;font-size:13px;margin-top:4px}
+  .setting output{text-align:right;font-weight:700}
+  .addcard{width:100%;padding:8px;border:2px dashed var(--accent);border-radius:10px;background:#f6f9ff;min-height:44px;font-weight:700;color:var(--accent)}
+  .danger{color:var(--danger)}
+  .hint{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+  footer{padding:4px 12px;font-size:12px;color:var(--muted);background:var(--panel);border-top:1px solid var(--line);display:flex;gap:12px}
+  .play-overlay{position:fixed;inset:0;background:rgba(20,22,35,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:50}
+  .play-overlay.on{display:flex}
+  .play-overlay canvas{width:min(96vw,calc((100vh - 90px)*16/9));aspect-ratio:16/9;image-rendering:pixelated;border-radius:8px;background:#000;touch-action:none}
+  .play-overlay .tb{background:var(--danger);border-color:#a52f35;color:#fff}
+  .play-info{display:flex;gap:16px;align-items:center;color:#d8dee9;font-size:13px;flex-wrap:wrap;justify-content:center}
+  .play-info #playVars{font-weight:700;color:#fff}
+  .play-overlay canvas{width:min(96vw,calc((100vh - 120px)*16/9))}
+  .toast{position:fixed;left:50%;bottom:48px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60;font-weight:600}
+  .toast.on{opacity:1}
+  .modal{position:fixed;inset:0;background:rgba(20,22,35,.5);display:none;align-items:center;justify-content:center;z-index:70}
+  .modal.on{display:flex}
+  .modal .box{background:#fff;border-radius:16px;padding:20px;max-width:420px;width:92vw}
+  .modal h2{margin:0 0 6px}
+  .modal .choices{display:grid;gap:8px;margin-top:12px}
+  .modal .choices button{justify-content:flex-start;min-height:52px}
+  .painter .box{max-width:760px;width:96vw;max-height:94vh;overflow:auto}
+  .pt-grid{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+  .pt-canvas{width:320px;height:320px;image-rendering:pixelated;border-radius:8px;border:2px solid var(--line);touch-action:none;cursor:crosshair;display:block;max-width:80vw;height:auto;aspect-ratio:1}
+  .pt-tools{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+  .pt-tools .chip{flex-direction:row;padding:6px 10px;min-height:40px}
+  .palette{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:6px 0 10px}
+  .palette button{aspect-ratio:1;border:2px solid #fff;border-radius:6px;box-shadow:0 0 0 1px var(--line);min-height:28px}
+  .palette button.on{box-shadow:0 0 0 3px var(--accent)}
+  .palette button.clear{background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 0 0/10px 10px}
+  .frames{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:6px 0}
+  .frames canvas{width:48px;height:48px;image-rendering:pixelated;border:2px solid var(--line);border-radius:6px;cursor:pointer;background:repeating-conic-gradient(#eee 0 25%,#fff 0 50%) 0 0/12px 12px}
+  .frames canvas.on{border-color:var(--accent)}
+  .preview{width:96px;height:96px;image-rendering:pixelated;border:2px solid var(--line);border-radius:8px;background:#bfe6ff}
+  .types{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+  .types button{text-align:left;padding:8px;border:2px solid var(--line);border-radius:10px;background:#fff;font-size:13px;font-weight:600;min-height:44px}
+  .types button.on{border-color:var(--accent);background:var(--accent-soft)}
+  .pt-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
+  .tb.primary{background:var(--accent);border-color:#2563c4;color:#fff}
+  @media (max-width:700px){.pt-grid{grid-template-columns:1fr}}
+  .scenes{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+  .scenes button{padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:700;min-height:34px;font-size:13px;color:var(--ink)}
+  .scenes button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .tb.add-btn.on{border-color:var(--accent);background:var(--accent-soft)}
+  .rule{border:2px solid var(--line);border-radius:12px;padding:10px;margin-bottom:10px;background:#fffdf8}
+  .rule.off{opacity:.55}
+  .rule .lbl{font-size:12px;font-weight:800;letter-spacing:.04em;margin:8px 0 4px}
+  .rule .lbl.when{color:#2f7de1}.rule .lbl.then{color:#23853d}.rule .lbl.if{color:#7d3fc9}
+  .rule select,.rule input[type=text],.rule input[type=number]{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;min-height:38px;margin-bottom:4px}
+  .rule-head{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px}
+  .rule-head .x{margin-left:auto}
+  .act{display:grid;grid-template-columns:minmax(0,1fr) 34px;gap:4px;align-items:start;border-left:3px solid #2fa84f;padding-left:6px;margin-bottom:6px}
+  .act .x,.rule-head .x{border:none;background:none;font-size:18px;color:var(--muted);width:34px;height:34px;border-radius:8px}
+  .act .x:hover,.rule-head .x:hover{background:#f3e3e3;color:var(--danger)}
+  .pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px}
+  .examples{display:grid;gap:6px;margin:8px 0 12px}
+  .examples button{text-align:left;font-size:12.5px;padding:8px;border:1px dashed var(--accent);border-radius:8px;background:#f6f9ff;min-height:40px;color:var(--ink)}
+  .var-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) auto 34px;gap:4px;align-items:center;margin-bottom:4px}
+  .var-row input{padding:6px;border:1px solid var(--line);border-radius:8px;min-height:36px;width:100%}
+  .var-row .x{border:none;background:none;font-size:18px;color:var(--muted)}
+  .help{max-width:560px;max-height:88vh;overflow:auto}
+  .help h3{margin:14px 0 4px}
+  .help ol,.help ul{margin:4px 0;padding-left:20px}
+  .help li{margin:3px 0}
+  .help kbd{background:#f0ece3;border:1px solid var(--line);border-radius:4px;padding:0 5px;font-size:12px}
+  .lvl-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .lvl-actions .tb{min-height:36px;font-size:13px;padding:0 10px}
+  details.piccat{margin:4px 0}
+  details.piccat summary{cursor:pointer;font-weight:700;font-size:13px;padding:6px 2px}
+  details.piccat .sprites{margin-top:4px}
+  details.extra{margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:6px 10px;background:#fffdf8}
+  details.extra summary{cursor:pointer;font-weight:700;font-size:13px;padding:4px 0}
+  .challenge{background:#fff7d6;border-bottom:2px solid #f0d77a}
+  .challenge .ch-title{font-weight:800;font-size:14px}
+  .challenge .ch-step{font-size:13px;margin:4px 0;align-items:flex-start}
+  .challenge .ch-step input{width:18px;height:18px;margin-top:1px}
+  body.big-ui{font-size:17px}
+  body.big-ui .tb{min-height:52px;font-size:17px}
+  body.big-ui .chip{min-height:60px;font-size:14px}
+  body.big-ui .chip .ic{font-size:24px}
+  body.big-ui .tile-btn img,body.big-ui .obj-btn img{width:56px;height:56px}
+  body.big-ui .main{grid-template-columns:270px 1fr 340px}
+  body.big-ui .field select,body.big-ui .field input[type=text]{min-height:50px;font-size:17px}
+  body.read-ui [data-speaking]{outline:3px solid #ffd23f;outline-offset:2px}
+  @media (max-width:900px){
+    .app{height:auto;min-height:100%}
+    .main{grid-template-columns:1fr;grid-template-rows:auto 440px auto}
+    aside.left,aside.right{max-height:34vh}
+    aside.left{border-right:none;border-bottom:1px solid var(--line)}
+    aside.right{border-left:none;border-top:1px solid var(--line)}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand"><img class="logo" alt="" src="data:image/png;base64,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"><span data-t="appName">Game Builder 2D</span></div>
+    <input class="proj-name" id="projName" aria-label="Game name">
+    <button class="tb play" id="btnPlay">▶ <span data-t="play">Play</span></button>
+    <button class="tb" id="btnUndo" title="Ctrl+Z">↶ <span data-t="undo">Undo</span></button>
+    <button class="tb" id="btnRedo" title="Ctrl+Y">↷ <span data-t="redo">Redo</span></button>
+    <span class="spacer"></span>
+    <button class="tb" id="btnNew">✚ <span data-t="new">New</span></button>
+    <button class="tb" id="btnOpen">📂 <span data-t="open">Open</span></button>
+    <button class="tb" id="btnSave">💾 <span data-t="save">Save</span></button>
+    <button class="tb" id="btnExport">⬇ <span data-t="export">Export game</span></button>
+    <button class="tb" id="btnLang" aria-label="Language">SV</button>
+    <input type="file" id="fileOpen" accept=".gbproj,.json,.html" hidden>
+  </header>
+
+  <div class="main">
+    <aside class="left">
+      <div class="sec challenge" id="challengeBox" style="display:none"></div>
+      <div class="sec">
+        <div class="tools">
+          <button class="chip" id="btnSettings"><span class="ic">⚙️</span><span data-t="settingsShort">Settings</span></button>
+          <button class="chip" id="btnRules"><span class="ic">📜</span><span data-t="rules">Rules</span></button>
+          <button class="chip" id="btnHelp"><span class="ic">❓</span><span data-t="helpShort">Help</span></button>
+        </div>
+      </div>
+      <div class="sec">
+        <h3 data-t="tools">Tools</h3>
+        <div class="tools">
+          <button class="chip" data-tool="paint"><span class="ic">✏️</span><span data-t="paint">Paint</span></button>
+          <button class="chip" data-tool="erase"><span class="ic">🧽</span><span data-t="erase">Erase</span></button>
+          <button class="chip" data-tool="move"><span class="ic">✋</span><span data-t="move">Move</span></button>
+          <button class="chip" data-tool="fill"><span class="ic">🪣</span><span data-t="fill">Fill</span></button>
+          <button class="chip" data-tool="rect"><span class="ic">▭</span><span data-t="rect">Rectangle</span></button>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="tabs" role="tablist">
+          <button id="tabTiles" class="on" role="tab" data-t="tiles">Tiles</button>
+          <button id="tabObjects" role="tab" data-t="objects">Objects</button>
+        </div>
+        <div id="shelf"></div>
+      </div>
+    </aside>
+
+    <div class="stage-wrap">
+      <div class="stage" id="stage"><canvas id="editCanvas"></canvas></div>
+      <div class="stagebar">
+        <div class="scenes" id="sceneTabs"></div>
+        <span id="status"></span>
+        <span class="spacer"></span>
+        <label><input type="checkbox" id="chkGrid" checked> <span data-t="grid">Grid</span></label>
+        <label><span data-t="zoom">Zoom</span>
+          <select id="selZoom"><option value="0.5">50%</option><option value="0.75">75%</option><option value="1" selected>100%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+        </label>
+      </div>
+    </div>
+
+    <aside class="right" id="inspector"></aside>
+  </div>
+  <footer><span>Game Builder 2D · prototype 0.5 · DorkTeach</span><span class="spacer"></span><span data-t="autosaved" id="saveState"></span></footer>
+</div>
+
+<div class="play-overlay" id="playOverlay">
+  <canvas id="playCanvas" width="640" height="360" tabindex="0"></canvas>
+  <div class="play-info"><span id="playVars"></span><span data-t="playHint" class="play-hint">P pause · M mute music · Esc stop</span></div>
+  <button class="tb" id="btnStop">■ <span data-t="stop">Stop</span> (Esc)</button>
+</div>
+
+<div class="modal" id="newModal">
+  <div class="box">
+    <h2 data-t="newTitle">Start a new game</h2>
+    <p class="hint" data-t="newHint">Your current game is replaced. Save it first if you want to keep it.</p>
+    <div class="choices">
+      <button class="tb" data-new="starter">🏃 <span data-t="tplStarter">Platformer: Coin Run (2 levels)</span></button>
+      <button class="tb" data-new="topdown">🗝️ <span data-t="tplTop">Top-down: Gem Garden adventure</span></button>
+      <button class="tb" data-new="arcade">🚀 <span data-t="tplArcade">Arcade: Meteor Dodge</span></button>
+      <button class="tb" data-new="fp">🧭 <span data-t="tplFP">3D: Maze of Riddles</span></button>
+      <button class="tb" data-new="empty">⬜ <span data-t="tplEmpty">Empty platformer</span></button>
+      <button class="tb" data-new="topempty">⬜ <span data-t="tplTopEmpty">Empty top-down map</span></button>
+      <button class="tb" data-new="cancel">✕ <span data-t="cancel">Cancel</span></button>
+    </div>
+  </div>
+</div>
+<div class="modal painter" id="painter" role="dialog" aria-modal="true" aria-labelledby="ptTitle">
+  <div class="box">
+    <h2 id="ptTitle" data-t="ptTitle">Draw an object</h2>
+    <div class="pt-grid">
+      <div>
+        <div class="row" id="ptSizeRow" style="margin-bottom:8px"></div>
+        <canvas id="ptCanvas" class="pt-canvas" width="320" height="320"></canvas>
+        <div class="pt-tools" id="ptTools">
+          <button class="chip" data-pt="pen">✏️ <span data-t="ptPen">Pen</span></button>
+          <button class="chip" data-pt="eraser">🧽 <span data-t="erase">Erase</span></button>
+          <button class="chip" data-pt="fill">🪣 <span data-t="ptFill">Fill</span></button>
+          <button class="chip" data-pt="pick">💧 <span data-t="ptPick">Pick colour</span></button>
+          <button class="chip" id="ptMirror">🪞 <span data-t="ptMirror">Mirror</span></button>
+          <button class="chip" id="ptFlip">⇋ <span data-t="ptFlip">Flip</span></button>
+          <button class="chip" id="ptUndo">↶ <span data-t="undo">Undo</span></button>
+          <button class="chip" id="ptClear">🗑 <span data-t="ptClear">Clear</span></button>
+        </div>
+      </div>
+      <div>
+        <label class="field"><span data-t="objName">Name</span><input type="text" id="ptName"></label>
+        <div class="field"><span data-t="ptColours">Colours</span></div>
+        <div class="palette" id="ptPalette"></div>
+        <div class="row"><span class="hint" style="margin:0" data-t="ptOwn">Own colour</span><input type="color" id="ptColor" value="#e5484d"></div>
+        <div class="row" style="margin-top:10px"><button class="tb" id="ptImportBtn" type="button" data-t="ptImport">🖼 Import picture</button><input type="file" id="ptImport" accept="image/*" hidden></div>
+        <p class="hint" data-t="ptImportHint">The picture is shrunk to 16×16 pixels.</p>
+        <div id="ptAnim">
+        <div class="field" style="margin-top:10px"><span data-t="ptFrames">Animation frames (up to 4)</span></div>
+        <div class="frames" id="ptFrames"></div>
+        <div class="row" style="align-items:flex-end;gap:12px">
+          <canvas id="ptPreview" class="preview" width="32" height="32"></canvas>
+          <label class="field" style="flex:1;margin:0"><span><span data-t="ptSpeed">Animation speed</span>: <output id="ptFpsOut">6</output></span><input type="range" id="ptFps" min="1" max="12" value="6"></label>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="field" style="margin-top:14px"><span id="ptWhatLbl">What is it?</span></div>
+    <div class="types" id="ptTypes"></div>
+    <div class="pt-actions">
+      <button class="tb" id="ptCancel">✕ <span data-t="cancel">Cancel</span></button>
+      <button class="tb primary" id="ptSave">✓ <span data-t="ptSave">Use this drawing</span></button>
+    </div>
+  </div>
+</div>
+<div class="modal" id="reflModal" role="dialog" aria-modal="true">
+  <div class="box" id="reflBox" style="max-width:520px"></div>
+</div>
+<div class="modal" id="helpModal" role="dialog" aria-modal="true">
+  <div class="box help" id="helpBox"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<!-- ===================== RUNTIME (also copied into exported games) ===================== -->
+<script id="gb-runtime">
+/*RUNTIME*/
+</script>
+<script>
+/*EDITOR*/
+</script>
+</body>
+</html>
